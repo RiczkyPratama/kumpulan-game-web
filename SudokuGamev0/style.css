@@ -1,0 +1,298 @@
+:root
+{
+    --borderWidth: 4px;
+    --height: 500px;
+    --width: 500px;
+    --inpWidth: calc(calc(var(--width)/3)/3);
+    --inpHeight: calc(calc(var(--height)/3)/3);
+}
+
+#main
+{
+    display: none;
+}
+
+#loader
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loader img
+{
+    height: 200px;
+}
+
+#head
+{
+    display: flex;
+    justify-content: center;
+    height: 100vw;
+    align-items: center;
+}
+
+#sudoku
+{
+    height: 150px;
+}
+
+.mainWrapper
+{
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+#container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#containerControls
+{
+    text-align: center;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
+#row1,
+#row2,
+#row3
+{
+    display: flex;
+}
+
+#sudokuWrapper
+{
+    border: 1px solid black;
+    height: auto;
+    width: auto;
+}
+
+#block11,
+#block12,
+#block13,
+#block21,
+#block22,
+#block23,
+#block31,
+#block32,
+#block33
+{
+    width: calc(var(--width)/3+ var(--borderWidth));
+    height: calc(var(--height)/3+ var(--borderHeight));
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    box-sizing: border-box;
+}
+
+
+.inp 
+{
+    width: var(--inpWidth);
+    height: var(--inpHeight);
+    box-sizing: border-box;
+    border-color: rgb(253, 248, 248);
+    text-align: center;
+    font-size: 20;
+    font-weight: bold;
+    position: relative;
+    border: .5px solid rgb(216, 230, 255);
+}
+
+.inp:active
+{
+    border: none;
+    background-color: rgb(24, 230, 147);
+}
+
+
+.inp:focus
+{
+    outline: none;
+    background-color: rgb(132, 220, 24);
+}
+
+
+.inp:hover
+{
+    background-color: aquamarine;
+    cursor: default;
+}
+
+
+#block11
+{
+    border-bottom: var(--borderWidth) solid black;
+    border-right: var(--borderWidth) solid black;
+}
+
+#block12
+{
+    border-bottom: var(--borderWidth) solid black;
+    border-right: var(--borderWidth) solid black;
+}
+
+#block13
+{
+    border-bottom: var(--borderWidth) solid black;
+}
+
+#block21
+{
+    border-bottom: var(--borderWidth) solid black;
+    border-right: var(--borderWidth) solid black;
+}
+
+#block22
+{
+    border-bottom: var(--borderWidth) solid black;
+    border-right: var(--borderWidth) solid black;
+}
+
+#block23
+{
+    border-bottom: var(--borderWidth) solid black;
+}
+
+#block31
+{
+    border-right: var(--borderWidth) solid black;
+}
+
+#block32
+{
+    border-right: var(--borderWidth) solid black;
+}
+
+
+#buttons
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+
+.but
+{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(17, 233, 249);
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.butX
+{
+    height: 50px;
+    margin-top: 20px;
+    background-color: rgb(100, 232, 113);
+    border: 1px solid grey;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    border-radius: 5px;
+    color: white;
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#ans
+{
+    height: 50px;
+    margin-top: 20px;
+    background-color: rgb(255, 107, 43);
+    border: 1px solid grey;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    border-radius: 5px;
+    color: white;
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#ans:hover
+{
+    background-color: rgb(124, 149, 171);
+    cursor: pointer;
+}
+
+.but:hover
+{
+    background-color: rgb(255, 208, 19);
+    cursor: pointer;
+    color: white;
+}
+
+.butX:hover
+{
+    background-color: rgb(124, 149, 171);
+    cursor: pointer;
+}
+
+
+
+
+/*   bagian popup   */
+
+#popup
+{
+    position: absolute;
+    top: 33%;
+    left: 33%;
+    background-color: white;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #feffe4;
+    border-radius: 10px;
+    border: 1px solid rgb(217, 206, 255);
+    display: none;
+}
+
+
+#message
+{
+    font-size: 40px;
+    font-family: cursive;
+    color: red;
+}
+
+
+#newGame
+{
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(243, 66, 77);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    user-select: none;
+}
+
+#newGame:hover
+{
+    cursor: pointer;
+    background-color: rgb(250, 62, 150);
+}

@@ -1,0 +1,109 @@
+<!-- 
+ Name : Riczky Pratama
+ Membuat Game Sudoku Sederhana 
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUDOKU - RICZKY PRATAMA GAME</title>
+
+    <meta name="description" content="game sederhana sudoku dibuat oleh riczky pratama">
+    <meta name="author" content="Riczky Pratama | WhoIs_SIRA">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="sudoku game sudokugame">
+
+    <!-- meta sharing -->
+     <meta property="og:title" content="sudoku">
+     <meta property="og:description" content="Game Sudoku Sederhana menggunakan HTML, CSS dan Javascript">
+     <meta property="og:image" content="https://static.vecteezy.com/system/resources/previews/009/377/212/large_2x/sudoku-logo-poster-design-free-vector.jpg">
+     <meta property="og:url" content="https://sudoku-psi-inky.vercel.app/">
+
+    
+    <link rel="icon" href="assets/pastime.png" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="android.css">
+    
+
+ </head>
+ <body>
+
+    <div id="loader">
+        <img src="assets/loading.gif" alt="">
+    </div>
+
+    <div id="main">
+        <div id="head"> <img src="assets/sudoku.png" id="sudoku" alt=""></div>
+        <div class="mainWrapper">
+            <div id="container">
+                <div id="sudokuWrapper">
+                    <div id="row1">
+                        <div id="block11"></div>
+                        <div id="block12"></div>
+                        <div id="block13"></div>
+                    </div>
+                    <div id="row2">
+                        <div id="block21"></div>
+                        <div id="block22"></div>
+                        <div id="block23"></div>
+                    </div>
+                    <div id="row3">
+                        <div id="block31"></div>
+                        <div id="block32"></div>
+                        <div id="block33"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="containerControls">
+                <div id="buttons">
+                    <div class="but">1</div>
+                    <div class="but">2</div>
+                    <div class="but">3</div>
+                    <div class="but">4</div>
+                    <div class="but">5</div>
+                    <div class="but">6</div>
+                    <div class="but">7</div>
+                    <div class="but">8</div>
+                    <div class="but">9</div>
+                </div>
+
+                <div class="butX">New Game</div>
+
+                <div id="ans">Reveal</div>
+            </div>
+
+            <div id="popup">
+                <img src="assets/review.png" id="main-star" alt="">
+                <img src="assets/star.png" id="star" alt="">
+                <div id="message">Selamat!! Kamu Menang</div>
+                <div id="newGame">New Game</div>
+            </div>
+
+            <div id="ansReveal">
+                <!-- Kunci Jawaban dari Sudokunya | Riczky Pratama -->
+            </div>
+
+            <div id="bottom">
+                <a href="https://id.linkedin.com/in/riczky-pratama-b199a1257">
+                    <div id="linkedin"></div>
+                </a>
+                <div id="developer">
+                    &#169;❤️ 2024 - RICZKY PRATAMA
+                </div>
+                <a href="https://github.com/RiczkyPratama">
+                    <div id="github"></div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    
+ </body>
+ </html>
